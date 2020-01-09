@@ -1,11 +1,24 @@
 package com.po;
 
+import java.util.List;
+
 public class Customer {
 
     String cusId;
     String cusName;
     String cusAddr;
     String cusTel;
+//    订单
+
+    List<OrderRecord> order;
+
+    public List<OrderRecord> getOrder() {
+        return order;
+    }
+
+    public void setOrder(List<OrderRecord> order) {
+        this.order = order;
+    }
 
     public String getCusId() {
         return cusId;

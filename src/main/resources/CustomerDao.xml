@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.CustomerDao">
 <!--    修改用户信息-->
-    <update id="changeInfo" parameterType="Customer">
+    <update id="changeInfo" parameterType="Customer" keyProperty="cusId">
         update customer
         <set>
             <if test="cusName != null">
@@ -22,4 +22,23 @@
     <select id="selectCusById" parameterType="String" resultType="Customer">
         select * from customer where cusId = #{cusId}
     </select>
+    <!--    查询用户订单-->
+    <select id="selectOrderById" parameterType="String"  resultType="OrderRecord" >
+        select orderId,cusId,status,orderrecord.num,sName sId,wtCost
+        from  orderRecord,shore,water
+        where  water.sId = shore.sId and water.wtId = orderRecord.wtId and cusId = #{cusId}
+    </select>
+
+<!--    查看所有水-->
+    <select id="selectAllWater"  resultType="Water">
+        select wtId,sName sId,wtCost,num
+        from water,shore
+        where water.sId = shore.sId
+    </select>
+
+<!--    下单-->
+    <insert id="orderWater" parameterType="OrderRecord" >
+        insert into orderrecord(cusId,wtId,num) values (#{cusId},#{wtId},#{num})
+    </insert>
+
 </mapper>

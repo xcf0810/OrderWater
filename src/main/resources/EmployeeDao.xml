@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.EmployeeDao">
+
+    <!--    查询未配送订单-->
+    <select id="selectUnDone"  resultType="OrderRecord" >
+        select orderId,num,cusName cusId,cusTel sId,cusAddr wtId
+        from  orderRecord,customer
+        where orderrecord.cusId = customer.cusId and status = 'UnDone'
+    </select>
+
+
+</mapper>

@@ -2,6 +2,7 @@ package com.service;
 
 import com.po.User;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 public interface UserService {
@@ -9,4 +10,5 @@ public interface UserService {
     public int signUp(User user);
 //    登录
     public String signIn(User user);
+
 }

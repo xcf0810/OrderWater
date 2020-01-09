@@ -86,7 +86,7 @@
 					url:'../../signIn',
 					data:{userId:username,userPws:password},
 					type:'post',
-					dataType:'text',
+					dataType:'html',
 					success:function(data){
 						console.log(data);
 						$("#box1").removeClass("sk-rotating-plane");
@@ -94,6 +94,7 @@
 
 						$("#box1").html(data);
 						$("#box1").removeClass("active");
+
 					}
 				});
 				

@@ -2,5 +2,14 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/views" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/views/index.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/errors" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/resources" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/views/footer.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/views/header.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/views/login.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/views/menus.jsp" charset="GBK" />
   </component>
 </project>

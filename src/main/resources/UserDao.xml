@@ -7,6 +7,6 @@
             insert into users (userId,userPws) values ('${userId}','${userPws}')
     </insert>
     <select id="signIn" parameterType="User" resultType="User">
-        select * from users where userId = '${userId}'
+        select * from users where userId = '${userId}'and userPws = '${userPws}'
     </select>
 </mapper>
