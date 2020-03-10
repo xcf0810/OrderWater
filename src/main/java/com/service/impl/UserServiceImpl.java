@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
         }
         switch (u.getUserKind()) {
             case 0:
-                str = "aInfo";//管理员登录
+                str = "forward:/listUsers";//管理员登录
                 break;
             case 1:
                 Customer customer = customerDao.selectCusById(u.getUserId());

@@ -17,4 +17,14 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<OrderRecord> selectUnDone() {
         return this.employeeDao.selectUnDone();
     }
+
+    @Override
+    public List<OrderRecord> selectDone() {
+        return this.employeeDao.selectDone();
+    }
+
+    @Override
+    public int changeStatus(Integer[] orderId) {
+        return this.employeeDao.changeStatus(orderId);
+    }
 }

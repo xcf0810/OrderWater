@@ -10,5 +10,6 @@
 		<mapper resource="UserDao.xml"/>
 		<mapper resource="CustomerDao.xml"/>
 		<mapper resource="EmployeeDao.xml"/>
+		<mapper resource="AdministratorDao.xml"/>
 	</mappers>
 </configuration>

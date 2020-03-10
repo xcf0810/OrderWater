@@ -41,6 +41,7 @@ public class UserController {
     public String signIn(User user) {
 //        HttpSession session = null;
 //        session.setAttribute("userId",user.getUserId());
+        session.setAttribute("user",user);
         String str = this.userService.signIn(user);
 //        System.out.println(session.getAttribute("customer"));
         return str;

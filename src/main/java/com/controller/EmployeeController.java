@@ -18,13 +18,18 @@ public class EmployeeController {
     public String selectUnDone(Model model){
         List<OrderRecord> list = this.employeeService.selectUnDone();
         model.addAttribute("UnDoneList",list);
-        System.out.println(list);
+//        System.out.println(list);
         return "employee/UnDoneOrder";
     }
     @RequestMapping("/selectDone")
     public String selectDone(Model model){
-        List<OrderRecord> list = this.employeeService.selectUnDone();
+        List<OrderRecord> list = this.employeeService.selectDone();
         model.addAttribute("DoneList",list);
         return "employee/DoneOrder";
+    }
+    @RequestMapping("/changeStatus")
+    public String changeStatus(Integer[] orderId){
+        this.employeeService.changeStatus(orderId);
+        return "forward:/selectUnDone";
     }
 }
